@@ -1,0 +1,20 @@
+@use "../utils" as *;
+
+.work {
+  padding: 80px 20px;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Anas Attar Portfolio</title>
+    <link rel="stylesheet" href="../dist/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="nav">
+      <div class="nav__wrapper">
+        <h2 class="nav__logo">Anas Attar</h2>
+
+        <input type="checkbox" class="nav__toggle" id="menu-toggle" />
+
+        <ul class="nav__links">
+          <li class="nav__item"><a class="nav__link" href="#work">Work</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <label for="menu-toggle" class="nav__icon" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <div class="hero__content">
+          <img
+            src="../src/img/anas.jpg"
+            class="hero__avatar"
+            alt="Portrait of Anas Attar"
+          />
+
+          <h1 class="hero__title">Hi, I'm Anas Attar</h1>
+          <p class="hero__text">
+            Creative Front-End Developer building modern web experiences.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--main">My Work</a>
+            <a href="#contact" class="btn btn--ghost">Hire Me</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <h2 class="work__heading">My Projects</h2>
+        <div class="work__list">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="./img/ecommerce.png" alt="E-commerce website preview" />
+            <h3 class="project-card__title">E-commerce Platform</h3>
+            <p class="project-card__text">
+              A full-featured e-commerce web application built with React and
+              Node.js. Includes product management, cart functionality,
+              authentication, and a smooth user experience.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img
+              src="./img/discover-palestine.jpg"
+              alt="Discover Palestine website preview"
+            />
+            <h3 class="project-card__title">Discover Palestine</h3>
+            <p class="project-card__text">
+              A platform that showcases cities, businesses, and local services
+              across Palestine. Designed to help users explore places, discover
+              shops, and connect with their community.
+            </p>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img src="./img/task-manager.jpg" alt="Task Manager app preview" />
+            <h3 class="project-card__title">Task Manager App</h3>
+            <p class="project-card__text">
+              A productivity app that helps users manage daily tasks
+              efficiently. Features include task creation, filtering, status
+              tracking, and a clean, responsive UI.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <p class="footer__text">© 2026 Anas Attar</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+@use "../utils" as *;
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #7c3aed, #10b981);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__avatar {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: fadeSlide 1s ease;
+  }
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+}
