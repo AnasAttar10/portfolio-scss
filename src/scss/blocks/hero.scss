@@ -1,14 +1,15 @@
 @use "../utils" as *;
-
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #7c3aed, #10b981);
   color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: linear-gradient(270deg, #7c3aed, #10b981);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
 
   &__avatar {
     width: 140px;
@@ -24,5 +25,17 @@
 
   &__text {
     margin-bottom: 20px;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

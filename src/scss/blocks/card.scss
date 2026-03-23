@@ -6,6 +6,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: $transition-base;
+  animation: fadeZoom 0.8s ease both;
 
   &:hover {
     transform: translateY(-10px) scale(1.02);
@@ -17,5 +18,16 @@
 
   &__text {
     font-size: 14px;
+  }
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

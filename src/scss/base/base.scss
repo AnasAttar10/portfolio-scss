@@ -18,3 +18,10 @@ a:focus {
 section {
   margin-bottom: 80px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

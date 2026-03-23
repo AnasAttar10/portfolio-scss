@@ -49,12 +49,20 @@ section {
   margin-bottom: 80px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 .nav {
   background: #111;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
 }
 .nav__wrapper {
   display: flex;
@@ -114,12 +122,14 @@ section {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #7c3aed, #10b981);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: linear-gradient(270deg, #7c3aed, #10b981);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
 }
 .hero__avatar {
   width: 140px;
@@ -135,8 +145,16 @@ section {
   margin-bottom: 20px;
 }
 
-.work {
-  padding: 80px 20px;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .work__heading {
   text-align: center;
@@ -201,6 +219,7 @@ section {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  animation: fadeZoom 0.8s ease both;
 }
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
@@ -212,6 +231,16 @@ section {
   font-size: 14px;
 }
 
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 html {
   scroll-behavior: smooth;
 }

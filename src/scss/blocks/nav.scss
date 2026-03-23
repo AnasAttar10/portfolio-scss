@@ -6,6 +6,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
   &__wrapper {
     display: flex;
     justify-content: space-between;
